@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "6675d156-1d3c-46f3-a85c-c20625d3bf8f",
+		"name": "Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TestAuthFailWrongPass",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"studentId\": \"2\",\n\t\"password\": \"123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/subjects",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"subjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestAuthFailNoUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"studentId\": \"42\",\n\t\"password\": \"dodo123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/subjects",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"subjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestSubjects",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"studentId\": \"2\",\n\t\"password\": \"dodo123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/subjects",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"subjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestSubjectsSearch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"studentId\": \"2\",\n\t\"password\": \"dodo123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/subjects/pr",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"subjects",
+						"pr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestDisenrollFail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"studentId\": \"2\",\n\t\"password\": \"dodo123\",\n\t\"subjectId\": \"1\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/disenroll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disenroll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestEnrollFailNoSubject",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"studentId\": \"2\",\n\t\"password\": \"dodo123\",\n\t\"subjectId\": \"42\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/enroll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"enroll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestEnroll",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"studentId\": \"2\",\n\t\"password\": \"dodo123\",\n\t\"subjectId\": \"1\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/enroll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"enroll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestEnrollFailAlreadyEnrolled",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"studentId\": \"2\",\n\t\"password\": \"dodo123\",\n\t\"subjectId\": \"1\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/enroll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"enroll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestDisenroll",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"studentId\": \"2\",\n\t\"password\": \"dodo123\",\n\t\"subjectId\": \"1\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/disenroll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disenroll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
