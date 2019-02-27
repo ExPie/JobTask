@@ -9,3 +9,9 @@ The application requires a mysql database to be running on localhost:3306.
 Schema can be made by importing the SQL script found in the "scripts" directory.
 
 Some Postman tests are also included in the "scripts" directory.
+Tests cover all use cases.
+
+User passwords:
+- userID2: dodo123
+- userID3: test
+
